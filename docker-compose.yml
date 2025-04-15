@@ -8,4 +8,5 @@ services:
       - ./data:/app/data        # data.json сохранится тут
     restart: always             # автоперезапуск при сбоях
     environment:
-      - TZ=Europe/Moscow        # или другой нужный часовой пояс
+      TOKEN: ${TOKEN}
+      TZ: "Europe/Moscow"
