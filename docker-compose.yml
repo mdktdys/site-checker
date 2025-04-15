@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  watcher-bot:
+    build: .
+    container_name: watcher-bot
+    volumes:
+      - ./data:/app/data        # data.json сохранится тут
+    restart: always             # автоперезапуск при сбоях
+    environment:
+      - TZ=Europe/Moscow        # или другой нужный часовой пояс
