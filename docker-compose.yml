@@ -5,8 +5,11 @@ services:
     build: .
     container_name: watcher-bot
     volumes:
-      - ./data:/app/data        # data.json сохранится тут
+      - cache:/app/data
     restart: always             # автоперезапуск при сбоях
     environment:
       TOKEN: ${TOKEN}
       TZ: "Europe/Moscow"
+
+volumes:
+  cache:
